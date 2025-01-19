@@ -47,6 +47,10 @@ def main():
                 player.kill()
                 print("Game Over!")
                 return
+            for bullet in shots:
+                if sprite.collides(bullet):
+                    bullet.kill()
+                    sprite.kill()
 
         pygame.display.flip()
         dt = clock.tick(60) / 1000
