@@ -16,6 +16,7 @@ def main():
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
+    shots = pygame.sprite.Group()
 
     Asteroid.containers = (updatable, drawable, asteroids)
     AsteroidField.containers = (updatable)
@@ -27,6 +28,7 @@ def main():
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
+                print("Quitting")
                 return
 
         # clear the screen by filling it with black
